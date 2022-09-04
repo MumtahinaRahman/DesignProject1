@@ -8,7 +8,6 @@ function App() {
       <Router>
         <NavBar />
       </Router>
-      <h1>a bridge between deaf-mute and us</h1>
     </div>
   );
 }
