@@ -1,27 +1,28 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Link as LinkR} from 'react-router-dom'
-import { Link as LinkS } from 'react-scroll'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const NavBar = () => {
   return (
-    // <Nav>
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Learn</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Interpret</a>
-        </li>
-    </ul>
-    // </Nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">Signus</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link active">About</a>
+                <a href="#" class="nav-item nav-link active">Learn</a>
+                <a href="#" class="nav-item nav-link active">Interpret</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <a href="#" class="nav-item nav-link">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
   )
 }
 
