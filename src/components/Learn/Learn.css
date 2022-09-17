@@ -1,0 +1,12 @@
+.learn{
+    margin-top: 5rem;
+     display: block;
+  }
+
+
+.card{
+    height: 100%;
+    width: fit-content;
+    object-fit: cover;
+}
+
