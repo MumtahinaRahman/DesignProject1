@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div>
         <NavBar />
-        <div className="homepage">
+        <div className="homepage" id='homepage'>
             {/* <div className="overlay"></div> */}
             <video src={videoBG} autoPlay loop muted/>
             <div className='content'>

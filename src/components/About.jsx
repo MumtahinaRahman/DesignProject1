@@ -8,7 +8,7 @@ import test1 from '../images/test1.jpeg'
 
 const About = () => {
   return (
-    <div className='about'>
+    <div className='about' id='about'>
         <h2>What we do</h2>
         <p>Signus is a web platform to learn <br/> Bangladeshi sign language and test you knowledge</p>
 

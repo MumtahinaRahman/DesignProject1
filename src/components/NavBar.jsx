@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -11,13 +12,13 @@ const NavBar = () => {
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link">Home</a>
-                <a href="#" class="nav-item nav-link">About</a>
-                <a href="#" class="nav-item nav-link">Learn</a>
-                <a href="#" class="nav-item nav-link">Interpret</a>
+                <a href="./HomePage/#home" class="nav-item nav-link">Home</a>
+                <a href="./About/#about" class="nav-item nav-link">About</a>
+                <a href="#learn" class="nav-item nav-link">Learn</a>
+                <a href="#interpret" class="nav-item nav-link">Interpret</a>
             </div>
             <div class="navbar-nav ms-auto">
-                <a href="#" class="nav-item nav-link">Login</a>
+                <a href="#login" class="nav-item nav-link">Login</a>
             </div>
         </div>
     </div>
