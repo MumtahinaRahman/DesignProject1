@@ -1,24 +1,31 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+
+    const navStyle = {
+        "text-decoration": "none"
+    };
+
   return (
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a href="#" class="navbar-brand">Signus</a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div className="container-fluid">
+        <div className="navbar-brand">Signus</div>
+        <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="./HomePage/#home" class="nav-item nav-link">Home</a>
-                <a href="./About/#about" class="nav-item nav-link">About</a>
-                <a href="#learn" class="nav-item nav-link">Learn</a>
-                <a href="#interpret" class="nav-item nav-link">Interpret</a>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+            <div className="navbar-nav">
+                <Link style={navStyle} to='/'><li  className="nav-item nav-link">Home</li></Link>
+                <Link style={navStyle}><li  className="nav-item nav-link">About</li></Link>
+                <Link style={navStyle} to='/lessons'><li  className="nav-item nav-link">Learn</li></Link>
+                <Link style={navStyle} to='/tests'><li  className="nav-item nav-link">Test</li></Link>
+                <Link style={navStyle} to='/'><li  className="nav-item nav-link">Interpret</li></Link>
+                
             </div>
-            <div class="navbar-nav ms-auto">
-                <a href="#login" class="nav-item nav-link">Login</a>
+            <div className="navbar-nav ms-auto">
+                <Link style={navStyle} to='/login'><li className="nav-item nav-link">Login</li></Link>
             </div>
         </div>
     </div>

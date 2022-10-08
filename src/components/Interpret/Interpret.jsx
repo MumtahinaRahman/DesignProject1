@@ -7,9 +7,9 @@ const Learn = () => {
   return (
     <div className='interpret justify-content-center'>
       <div className="card card-interpret mb-3">
-      <div class="row g-0">
+      <div className="row g-0">
       <div className="col-md-4">
-        <img src={interpret1} class="img-fluid rounded-start" alt="..." />
+        <img src={interpret1} className="img-fluid rounded-start" alt="..." />
       </div>
       <div className="col-md-8">
         <div className="card-body">

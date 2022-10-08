@@ -1,25 +1,25 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar'
 import HomePage from './components/HomePage';
-import About from './components/About';
-import Learn from './components/Learn/Learn';
-import Interpret from './components/Interpret/Interpret';
 import Footer from './components/Footer/Footer';
+import Lessons from './Pages/Lessons';
+import Tests from './Pages/Tests';
+import Login from './Pages/Login';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Routes> */}
-          {/* <Route path="/" element={<HomePage />}/> */}
-          <HomePage />
-          <About />
-          {/* <Route path="/learn" element={<Learn />}/> */}
-          <Learn />
-          <Interpret />
-        {/* </Routes> */}
-
-        <Footer />
+          <NavBar />
+          {/* <HomePage /> */}
+          <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="lessons" element={<Lessons />}/>
+          <Route path="tests" element={<Tests />}/>
+          <Route path="login" element={<Login />}/>
+          </Routes>
+          <Footer />
       </Router>
     </div>
   );
