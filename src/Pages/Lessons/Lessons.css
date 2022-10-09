@@ -1,0 +1,10 @@
+
+.lesson-img {
+    width: 16vw;
+    height: 10vw;
+    object-fit: contain;
+}
+
+.wrapper{
+    width: 60vw;
+}
