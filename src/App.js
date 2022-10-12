@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Lessons from './Pages/Lessons/Lessons';
 import Tests from './Pages/Tests';
 import Login from './Pages/Login/Login';
+import Profile from './Pages/Profile/Profile';
 
 // style={{backgroundImage:`url(${bg})`,  }}
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="lessons" element={<Lessons />}/>
           <Route path="tests" element={<Tests />}/>
           <Route path="login" element={<Login />}/>
+          <Route path="profile" element={<Profile />}/>
           </Routes>
           <Footer />
       </Router>
