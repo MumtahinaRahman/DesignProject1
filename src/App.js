@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import HomePage from './components/HomePage';
 import Footer from './components/Footer/Footer';
 import Lessons from './Pages/Lessons/Lessons';
+import Lesson from './Pages/Lesson/Lesson';
 import LessonID from './Pages/LessonID/LessonID';
 import Tests from './Pages/Tests';
 import Login from './Pages/Login/Login';
@@ -21,9 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />}/>
             <Route path="lessons" element={<Lessons />}/>
-            <Route path="lessons" element={<Lessons />}/>
+            <Route path="lessons/lesson" element={<Lesson />}/>
             <Route path="lessons/lesson/:id" element={<LessonID />}/>
-            {/* <Route path="lessons/lesson/:id" element={<LessonID />}/> */}
             <Route path="tests" element={<Tests />}/>
             <Route path="login" element={<Login />}/>
             <Route path="profile" element={<Profile />}/>
