@@ -21,7 +21,7 @@ function Lessons() {
           <div className="col">
           
             <div className="card">
-            <Link style={{"text-decoration":"none"}}>
+            <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
               <img src={vowel} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Vowels</h5>
@@ -32,7 +32,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link style={{"text-decoration":"none"}}>
+              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
               <img src={consonant} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Consonants</h5>
@@ -42,7 +42,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link style={{"text-decoration":"none"}}>
+              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
               <img src={shortVowel} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Shortened vowels</h5>
@@ -52,7 +52,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link style={{"text-decoration":"none"}}>
+              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
               <img src={non} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Basic words</h5>
@@ -62,7 +62,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link style={{"text-decoration":"none"}}>
+              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
               <img src={jhuli} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Everyday words</h5>
@@ -72,7 +72,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link style={{"text-decoration":"none"}}>
+              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
               <img src={mon} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Everyday phrases</h5>
