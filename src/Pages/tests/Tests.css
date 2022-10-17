@@ -1,0 +1,7 @@
+.test-card-wrapper{
+    width: 80rem;
+    margin-top: 100px;
+    margin-left: 33%;
+    margin-bottom: 100px;
+    display: flex;
+}

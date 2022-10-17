@@ -2,8 +2,21 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import './LessonID.css'
 import animation from '../../images/animation.gif';
+import axios from 'axios'
 
 function Lesson() {
+
+  const changeStatus = async () => {
+    console.log("running")
+    const url = "http://localhost:4000/api/lessons/634a5737bfa30f3712f5aaee"
+    const res = await axios.put(url, {
+      "done": true        
+    })
+    .then((response) => {
+      res.json({ message: "successful" })
+    })
+  }
+
   return (
     <div className='lesson-card-wrapper'>
          <Card className='lesson-card'>
@@ -29,7 +42,7 @@ function Lesson() {
             <div className='row lesson-buttons'>
               <div className='col-12'>
                 <button type="button" className="btn btn-outline-secondary lesson-btn">Prev</button>
-                <button type="button" className="btn btn-outline-success lesson-btn">Done</button>
+                <button type="button" className="btn btn-outline-success lesson-btn" onClick={changeStatus}>Done</button>
                 <button type="button" className="btn btn-outline-secondary lesson-btn">Next</button>
               </div>
             </div>

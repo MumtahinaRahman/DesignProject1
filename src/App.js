@@ -7,7 +7,9 @@ import Footer from './components/Footer/Footer';
 import Lessons from './Pages/Lessons/Lessons';
 import Lesson from './Pages/Lesson/Lesson';
 import LessonID from './Pages/LessonID/LessonID';
-import Tests from './Pages/Tests';
+import Tests from './Pages/tests/Tests';
+import Quiz from './Pages/Quiz/Quiz';
+import Webcam from './Pages/Webcam/Webcam';
 import Login from './Pages/Login/Login';
 import Profile from './Pages/Profile/Profile';
 
@@ -25,6 +27,8 @@ function App() {
             <Route path="lessons/lesson" element={<Lesson />}/>
             <Route path="lessons/lesson/:id" element={<LessonID />}/>
             <Route path="tests" element={<Tests />}/>
+            <Route path="quiz" element={<Quiz />}/>
+            <Route path="webcam" element={<Webcam />}/>
             <Route path="login" element={<Login />}/>
             <Route path="profile" element={<Profile />}/>
           </Routes>
