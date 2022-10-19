@@ -17,6 +17,14 @@ function Lesson() {
     })
   }
 
+  const getDescription = async () => {
+    const url ="http://localhost:4000/api/lessons/634ed4fd7b54751d89f2e5b3"
+    const res = await axios.get(url)
+    .then((response) => {
+      res.json(response.data.description)
+    })
+  }
+
   return (
     <div className='lesson-card-wrapper'>
          <Card className='lesson-card'>
@@ -35,6 +43,7 @@ function Lesson() {
                 <Card.Title>description</Card.Title>
                 <Card.Text>
                   this will be the description of the anination.
+                  {/* {getDescription} */}
                 </Card.Text>
               </div>
             </div>

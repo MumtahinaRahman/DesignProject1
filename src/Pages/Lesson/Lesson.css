@@ -1,11 +1,21 @@
 .lesson-wrapper{
     padding-top: 150px;
     padding-bottom: 150px;
-    margin-left: 25%;
-    width: 37rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80rem;
+}
+.lesson-wrapper .lesson-title{
+    margin-bottom: 25px;
 }
 
 .single-lesson-id-card{
-    width: 5rem;
-    height: 5rem;
+    width: 12rem;
+    height: 10rem;
+    margin-right: 20%;
+
+}
+.single-lesson-id-card Text{
+    font-family: 'Courier New', Courier, monospace;
+    color:black
 }

@@ -13,8 +13,8 @@ const Learn = () => {
       </div>
       <div className="col-md-8">
         <div className="card-body">
-          <h5 className="card-title">Interpret</h5>
-          <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 className="card-title">Assessment</h5>
+          <p className="card-text">Test against learned words though quiz and gesture recognition</p>
           <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
           <button type="button" className="btn btn-outline-dark">Start now</button>
         </div>

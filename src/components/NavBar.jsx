@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+// import { Badge } from '@material-ui/core';
 
 const NavBar = () => {
 
@@ -11,7 +12,9 @@ const NavBar = () => {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div className="container-fluid">
-        <div className="navbar-brand">Signus</div>
+        <div className="navbar-brand">
+        <p> <h2> <span> <b> Sign</b></span>Us </h2></p>
+        </div>
         <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span className="navbar-toggler-icon"></span>
         </button>
@@ -27,6 +30,10 @@ const NavBar = () => {
             <div className="navbar-nav ms-auto">
                 <Link style={navStyle} to='/login'><li className="nav-item nav-link">Login</li></Link>
                 <Link style={navStyle} to='/profile'><li className="nav-item nav-link">Profile</li></Link>
+                {/* <li> <Badge color="secondary" badgeContent={99}>
+                    <MailIcon />
+                    </Badge>
+                </li> */}
             </div>
         </div>
     </div>

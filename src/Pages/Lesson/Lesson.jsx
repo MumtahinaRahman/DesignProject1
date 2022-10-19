@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import SearchIcon from '@mui/icons-material/Search';
 import './Lesson.css'
+import './Search.css'
 import axios from 'axios'
+import vaat from '../../images/vaat.png'
 
 function Lesson() {
 
@@ -41,12 +44,22 @@ function Lesson() {
 
   return (
     <div className='lesson-wrapper'>
+        <div className='lesson-title'>
+            <h2> Everyday Phrases </h2>
+        </div>
+        <div className='container'>
+            <input type="text" placeholder="Search phrases"></input> 
+            <SearchIcon />
+            <div className='search'> </div>
+        </div>
+        
         <Row xs={1} md={5} className="g-4">
             {lessons.map((lesson, idx) => (
                 <Col>
                     <Link to='/lessons/lesson/:id' style={{textDecoration: "none"}}>
                         <Card className='single-lesson-id-card'>
                             <Card.Body>
+                                <Card.Img src={vaat} />
                             <Card.Text>
                                 {lesson.name}
                             </Card.Text>

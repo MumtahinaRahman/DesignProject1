@@ -8,3 +8,9 @@
     left: 0;
     width: 100%;
   }
+  .footer h6{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .footer p{
+    font-family: 'Courier New', Courier, monospace;
+  }

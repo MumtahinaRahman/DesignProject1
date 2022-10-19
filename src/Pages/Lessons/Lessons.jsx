@@ -5,15 +5,20 @@ import './Lessons.css';
 import vowel from '../../images/vowel.png'
 import consonant from '../../images/consonant.png'
 import shortVowel from '../../images/shortVowel.png'
-import mon from '../../images/mon-valo-nei.png'
-import non from '../../images/non.jpeg'
-import jhuli from '../../images/jhuli.jpg'
+// import mon from '../../images/mon-valo-nei.png'
+// import non from '../../images/non.jpeg'
+import word from '../../images/word.png'
+import everyday from '../../images/everyday.png'
+import vaat from '../../images/vaat.png'
+// import jhuli from '../../images/jhuli.jpg'
 
 function Lessons() {
   return (
     // className='wrapper' style={{"text-decoration":"none"}}
+    // Comic Sans MS, Comic Sans, cursive
     <div >
-            <h2 style={{"padding-top": "80px"}}>Browse all lessons here</h2>
+            <h3 style={{"padding-top": "100px", "fontFamily":"Verdana, sans-serif", "fontStyle": "bold"}}> <b style={{"font-size": "50px"}}>A</b> World of Learning Is Waiting For You. </h3>
+            <h4 style={{"padding-top": "10px", "fontFamily":"Verdana, sans-serif", "fontStyle": "bold"}}><b style={{"font-size": "45px"}}>S</b>tart your sign language journey today.</h4>
             <div className='justify-content-center' style={{"padding-top": "50px", "padding-bottom": "70px", "display": "flex", "overflow": "hidden"}}>
             
             <div  className="wrapper row row-cols-1 row-cols-md-3 g-2 ">
@@ -53,7 +58,7 @@ function Lessons() {
           <div className="col">
             <div className="card">
               <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
-              <img src={non} className="card-img-top lesson-img" alt="..."/>
+              <img src={word} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Basic words</h5>
                 </div>
@@ -63,7 +68,7 @@ function Lessons() {
           <div className="col">
             <div className="card">
               <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
-              <img src={jhuli} className="card-img-top lesson-img" alt="..."/>
+              <img src={everyday} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Everyday words</h5>
                 </div>
@@ -73,7 +78,7 @@ function Lessons() {
           <div className="col">
             <div className="card">
               <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
-              <img src={mon} className="card-img-top lesson-img" alt="..."/>
+              <img src={vaat} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Everyday phrases</h5>
                 </div>
