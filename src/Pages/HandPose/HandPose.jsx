@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-// import * as tf from "@tensorflow/tfjs";
+import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
 //import ".././App.css";
@@ -50,6 +50,7 @@ function HandPose() {
   };
 
   runHandpose();
+  tf.getBackend();
 
   return (
     <div className="App">
@@ -60,6 +61,7 @@ function HandPose() {
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
+            marginTop: "160px",
             left: 0,
             right: 0,
             textAlign: "center",
@@ -75,6 +77,7 @@ function HandPose() {
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
+            marginTop: "160px",
             left: 0,
             right: 0,
             textAlign: "center",
