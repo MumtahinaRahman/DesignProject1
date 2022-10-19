@@ -16,10 +16,10 @@ router.get('/:id', (req, res) => {
 
 // POST a single lesson id on done click
 router.post('/:id', async (req, res) => {
-    const {lessonNo, name, done} = req.body
+    const {lessonNo, name, description, done} = req.body
 
     try {
-        const lesson = await Lesson.create({lessonNo, name, done})
+        const lesson = await Lesson.create({lessonNo, name, description, done})
         res.status(200).json(lesson)
     } catch(error) {
         res.status(400).json({error: error.message})

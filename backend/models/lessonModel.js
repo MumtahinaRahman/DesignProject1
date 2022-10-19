@@ -11,6 +11,10 @@ const lessonSchema = new Schema({
         type: String,
         required: true
     },
+    description: {
+        type: String,
+        required: false
+    },
     done: {
         type: Boolean,
         required: true
