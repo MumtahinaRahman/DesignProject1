@@ -1,0 +1,38 @@
+.test-card-wrapper{
+    width: 80rem;
+    height: 200px;
+    margin-top: 150px;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.card1 {
+    margin-right: 20px;
+}
+
+.card2 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card3 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card4 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card5 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button {
+    font-size: large;
+    font-weight: 400;
+}
