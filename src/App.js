@@ -12,6 +12,7 @@ import Quiz from './Pages/Quiz/Quiz';
 import Webcam from './Pages/Webcam/Webcam';
 import Login from './Pages/Login/Login';
 import Profile from './Pages/Profile/Profile';
+import Consonants from './Pages/Consonants/Consonants';
 
 // style={{backgroundImage:`url(${bg})`,  }}
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="lessons" element={<Lessons />}/>
             <Route path="lessons/lesson" element={<Lesson />}/>
             <Route path="lessons/lesson/:id" element={<LessonID />}/>
+            <Route path="Consonants/Consonants" element={<Consonants />}/>
             <Route path="tests" element={<Tests />}/>
             <Route path="quiz" element={<Quiz />}/>
             <Route path="webcam" element={<Webcam />}/>

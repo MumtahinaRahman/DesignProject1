@@ -37,7 +37,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
+              <Link to='/Consonants/Consonants' style={{"text-decoration":"none"}}>
               <img src={consonant} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Consonants</h5>
