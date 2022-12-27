@@ -1,44 +1,35 @@
 const express = require('express')
-const Lesson = require('../models/lessonModel')
+// const Lesson = require('../models/lessonModel')
+const {
+    createLesson,
+    getLessons,
+    getLesson,
+    deleteLesson,
+    updateLesson, 
+    doneLesson
+} = require('../controller/lessonController')
 
 const router = express.Router()
 
 // GET all lessons
-router.get('/', async (req, res) => {
-    const lessons = await Lesson.find() 
-    res.json(lessons)
-})
+router.get('/', getLessons)
 
 // GET a single lesson description
-router.get('/:id', (req, res) => {
-    res.json({msg: 'GET a single lesson'})
-})
+router.get('/:id', getLesson)
 
 // POST a single lesson id on done click
-router.post('/:id', async (req, res) => {
-    const {lessonNo, name, description, done} = req.body
+router.post('/:id', createLesson)
 
-    try {
-        const lesson = await Lesson.create({lessonNo, name, description, done})
-        res.status(200).json(lesson)
-    } catch(error) {
-        res.status(400).json({error: error.message})
-    }
-    
-})
+// Delete a lesson
 
-router.put('/:id', async (req, res) => {
-    const lesson = await Lesson.findByIdAndUpdate(
-        req.params.id,
-        {
-            done: true
-        },
-        {
-            new: true
-        }
-    )
-    res.json(lesson)
-})
+router.delete('/:id', deleteLesson)
+
+// Update a lesson
+
+router.patch('/:id', updateLesson)
+
+// Done a lesson
+router.put('/:id', doneLesson)
 
 
 
