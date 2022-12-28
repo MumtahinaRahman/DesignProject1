@@ -11,9 +11,11 @@ import Tests from './Pages/tests/Tests';
 import Quiz from './Pages/Quiz/Quiz';
 import Webcam from './Pages/Webcam/Webcam';
 import HandPose from './Pages/HandPose/HandPose';
-import Login from './Pages/Login/Login';
+// import Login from './Pages/Login/Login';
 import Profile from './Pages/Profile/Profile';
 import Consonants from './Pages/Consonants/Consonants';
+import Login from './Pages/Authentication/Login'
+import Signup from './Pages/Authentication/Signup'
 
 // style={{backgroundImage:`url(${bg})`,  }}
 
@@ -33,6 +35,7 @@ function App() {
             <Route path="quiz" element={<Quiz />}/>
             <Route path="tests/webcam" element={<HandPose />}/>
             <Route path="login" element={<Login />}/>
+            <Route path="signup" element={<Signup />}/>
             <Route path="profile" element={<Profile />}/>
           </Routes>
           <Footer />

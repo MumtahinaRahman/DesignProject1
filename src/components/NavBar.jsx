@@ -29,6 +29,7 @@ const NavBar = () => {
             </div>
             <div className="navbar-nav ms-auto">
                 <Link style={navStyle} to='/login'><li className="nav-item nav-link">Login</li></Link>
+                <Link style={navStyle} to='/signup'><li className="nav-item nav-link">Signup</li></Link>
                 <Link style={navStyle} to='/profile'><li className="nav-item nav-link">Profile</li></Link>
                 {/* <li> <Badge color="secondary" badgeContent={99}>
                     <MailIcon />
