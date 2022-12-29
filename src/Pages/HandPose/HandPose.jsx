@@ -7,6 +7,13 @@ import Webcam from "react-webcam";
 import { drawHand } from "./Utilities";
 // import * as fp from "fingerpose";
 
+//importing custom gesture
+import {one} from "./One.jsx";
+
+//importing emojis
+import {thumbs_up} from "./thumbs_up.png";
+import {victory} from "./victory.png";
+
 function HandPose() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -55,15 +62,15 @@ function HandPose() {
         ]);
 
         const gesture = await GE.estimate(hand[0].landmarks, 8);
-        console.log(gesture.gestures);
+        // console.log(gesture.gestures);
 
         if (gesture.gestures !== undefined && gesture.gestures.length > 0){
           const confidence = gesture.gestures.map((prediction) => prediction.score);
           const maxConfidence = confidence.indexOf(Math.max.apply(null, confidence));
-          //setEmoji(gesture.gestures[maxConfidence].name);
-          var emoji = gesture.gestures[maxConfidence].name;
+          setEmoji(gesture.gestures[maxConfidence].name);
+          // var emoji = gesture.gestures[maxConfidence].name;
           console.log("index: ", maxConfidence);
-          console.log("confidence: ", confidence);
+          // console.log("confidence: ", confidence);
           console.log(emoji);
         }
       }
@@ -112,6 +119,20 @@ function HandPose() {
             height: 480,
           }}
         />
+
+        {emoji !== null ? <h1 style={{
+          zindex: 20,
+          position: "absolute",
+          left: 360,
+          bottom: 500,
+          top: 120,
+          right: 0,
+          testAlign: "center",
+          color: "black",
+          height: 100,
+          width: 100
+          }} > {emoji} </h1> : ""}
+
       </header>
     </div>
   );
