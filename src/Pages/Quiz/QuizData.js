@@ -2,36 +2,37 @@ export const QuizData = [
     {
         id: 0,
         question: `What letter does the following image mean?`,
-        image: "bilai.jpg",
-        options: [`New Delhi`, `Abuja`, `Owerri`, `Enugu`],
-        answer: `New Delhi`
+        image: ".././images/gaw.png",
+        // image: "gaw.png",
+        options: [`gaw`, `kaw`, `chaw`, `ungo`],
+        answer: `gaw`
     },
     {
         id: 0,
         question: `What letter does the following image mean?`,
         image: "../images/gaw.png",
-        options: [`New Delhi`, `Abuja`, `Mumbai`, `Aba`],
-        answer: `New Delhi`
+        options: [`khaw`, `ghaw`, `ungo`, `kaw`],
+        answer: `ghaw`
     },
     {
         id: 0,
         question: `What does the following gesture mean?`,
         image: "../images/gaw.png",
-        options: [`Melbourne`, `Akokwa`, `Owerri`, `Sydney`],
-        answer: `Melbourne`
+        options: [`khaw`, `ghaw`, `ungo`, `kaw`],
+        answer: `kaw`
     },
     {
         id: 0,
         question: `What number does the following image mean?`,
         image: "../images/gaw.png",
-        options: [`Rijadh`, `Ankara`, `Istanbul`, `Abakaliki`],
-        answer: `Rijadh`
+        options: [`cchaw`, `ghaw`, `daw`, `kaw`],
+        answer: `daw`
     },
     {
         id: 0,
         question: `What does the following image mean?`,
         image: "../images/gaw.png",
-        options: [`Syria`, `Damascus`, `Anambra`, `Enugu`],
-        answer: `Syria`
+        options: [`khaw`, `ghaw`, `ungo`, `kaw`],
+        answer: `ungo`
     },
 ]

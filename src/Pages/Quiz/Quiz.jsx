@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {QuizData} from '../../components/Quiz/QuizData.js';
-import '../../components/Quiz/Quiz.css'; 
-import {bilai} from './bilai.jpg'
+import {QuizData} from './QuizData.js';
+import './Quiz.css'; 
+import bilai from './bilai.jpg'
 
 export class Quiz extends Component {
 
@@ -14,8 +14,8 @@ export class Quiz extends Component {
       options: [],     //the four options
       quizEnd: false,  //determines if it's the last question
       score: 0,        //holds the score
-      disabled: true,   // determines the status of the buttons
-      image: null
+      disabled: true,  // determines the status of the buttons
+      image: null      //the picture
     }
   }
 
@@ -121,8 +121,9 @@ export class Quiz extends Component {
       <div className='quiz'>
           <h2>{question}</h2>
           <span>{`Question ${currentIndex + 1} of ${QuizData.length}`}</span>
-          {/* <div className='quiz-image'><img src={require(`./././images/${image}`).default} alt={QuizData.answer}/></div> */}
-          <div className='quiz-image'><img src={bilai} alt={QuizData.answer}/></div>
+          {/* <div className='quiz-image'><img src={require(`.././images/${image}`).default} alt={QuizData.answer}/></div> */}
+          <div className='quiz-image'><img src={image} alt={QuizData.answer}/></div>
+          {/* <div className='quiz-image'><img src={bilai} alt={QuizData.answer}/></div> */}
           <h3>{QuizData.answer}</h3>
           {options.map(option => (  //for each option, new paragraph
               <p key={option.id} 
