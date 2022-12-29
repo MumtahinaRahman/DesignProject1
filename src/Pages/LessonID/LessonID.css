@@ -1,0 +1,24 @@
+.lesson-card-wrapper{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.lesson-card{
+    margin-left: 25%;
+}
+
+.lesson-contents{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.animation-display{
+    height: 300px;
+    width: 300px;
+}
+
+.lesson-btn{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}

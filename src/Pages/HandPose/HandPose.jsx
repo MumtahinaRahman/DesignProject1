@@ -3,9 +3,9 @@ import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import * as fp from "fingerpose";
 import Webcam from "react-webcam";
-import "./App.css";
-import { drawHand } from "./utilities";
-
+//import ".././App.css";
+import { drawHand } from "./Utilities";
+// import * as fp from "fingerpose";
 
 function HandPose() {
   const webcamRef = useRef(null);
@@ -76,6 +76,7 @@ function HandPose() {
   };
 
   runHandpose();
+  // tf.getBackend();
 
   return (
     <div className="App">
@@ -86,6 +87,7 @@ function HandPose() {
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
+            marginTop: "160px",
             left: 0,
             right: 0,
             textAlign: "center",
@@ -101,6 +103,7 @@ function HandPose() {
             position: "absolute",
             marginLeft: "auto",
             marginRight: "auto",
+            marginTop: "160px",
             left: 0,
             right: 0,
             textAlign: "center",

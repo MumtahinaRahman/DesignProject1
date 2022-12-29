@@ -4,7 +4,8 @@ import './Footer.css';
 const Footer = () => {
   return (
     <div className='footer'>
-        <h5>SIGNUS</h5>
+        {/* <h5>SignUs</h5> */}
+        <h2> <span> <b> Sign</b></span>Us </h2>
         <h6>Contributions: </h6>
         <p>
             Tasfia Barshat 190042126 <br/>
