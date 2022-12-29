@@ -1,9 +1,19 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import { useLogout } from '../hooks/useLogout';
+import '../../src/Pages/Authentication/Auth.css'
+import { useAuthContext } from '../hooks/useAuthContext';
 // import { Badge } from '@material-ui/core';
 
 const NavBar = () => {
+
+    const {logout} = useLogout()
+    const { user } = useAuthContext()
+
+    const handleClick = () => {
+        logout()
+    }
 
     const navStyle = {
         "text-decoration": "none"
@@ -27,14 +37,25 @@ const NavBar = () => {
                 <Link style={navStyle} to='/interpret'><li  className="nav-item nav-link">Interpret</li></Link>
                 
             </div>
+            
             <div className="navbar-nav ms-auto">
-                <Link style={navStyle} to='/login'><li className="nav-item nav-link">Login</li></Link>
-                <Link style={navStyle} to='/signup'><li className="nav-item nav-link">Signup</li></Link>
-                <Link style={navStyle} to='/profile'><li className="nav-item nav-link">Profile</li></Link>
-                {/* <li> <Badge color="secondary" badgeContent={99}>
-                    <MailIcon />
-                    </Badge>
-                </li> */}
+                {user && (
+                    <div>
+                        <span>{user.email}</span>
+                        <button onClick={handleClick} className='nav-logout'>Log out</button>
+                        <Link style={navStyle} to='/profile'><li className="nav-item nav-link nav-profile">Profile</li></Link>
+                    </div>
+                )}
+                
+                {!user && (
+                    <div className='loggedOut'>
+                        <Link style={navStyle} to='/login'><li className="nav-item nav-link nav-login">Login</li></Link>
+                        <Link style={navStyle} to='/signup'><li className="nav-item nav-link nav-signup">Signup</li></Link>
+                    
+                    </div>
+                )}
+                
+                
             </div>
         </div>
     </div>

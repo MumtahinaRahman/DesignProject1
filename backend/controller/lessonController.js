@@ -6,6 +6,8 @@ const { Less } = require('@tensorflow/tfjs-core')
 
 const getLessons = async(req, res) => {
     const lessons = await Lesson.find({}).sort({createdAt: -1})
+
+    console.log(lessons)
     
     res.status(200).json(lessons)
 }
@@ -31,12 +33,12 @@ const getLesson = async(req, res) => {
 // create a new lesson
 
 const createLesson = async(req, res) => {
-    const {lessonNo, name, description, done} = req.body
+    const {lessonNo, name, description} = req.body
 
     // add doc to db
 
     try {
-        const lesson = await Lesson.create({lessonNo, name, description, done})
+        const lesson = await Lesson.create({lessonNo, name, description})
         res.status(200).json(lesson)
     } catch(error) {
         res.status(400).json({error: error.message})
@@ -62,6 +64,8 @@ const deleteLesson = async(req, res) => {
     
 }
 
+// update a lesson
+
 const updateLesson = async(req, res) => {
     const { id } = req.params
 
@@ -81,7 +85,7 @@ const updateLesson = async(req, res) => {
     
 }
 
-// update a lesson
+
 
 // Done a lesson 
 

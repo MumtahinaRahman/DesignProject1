@@ -9,7 +9,12 @@ const {
     doneLesson
 } = require('../controller/lessonController')
 
+const requireAuth = require('../middleware/requireAuth')
+
 const router = express.Router()
+
+// require auth for all lessons routes
+router.use(requireAuth)
 
 // GET all lessons
 router.get('/', getLessons)
@@ -18,7 +23,7 @@ router.get('/', getLessons)
 router.get('/:id', getLesson)
 
 // POST a single lesson id on done click
-router.post('/:id', createLesson)
+router.post('/', createLesson)
 
 // Delete a lesson
 

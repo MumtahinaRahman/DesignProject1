@@ -32,6 +32,16 @@ header a {
   margin: 0 auto;
 }
 
+
+.nav-profile, .nav-logout, .nav-login, .nav-signup {
+  display: inline-block;
+}
+
+span {
+  color: #ddd;
+  margin-right: 20px;
+}
+
 /* homepage */
 .home {
   display: grid;
@@ -108,6 +118,17 @@ nav {
 }
 nav a {
   margin-left: 10px;
+}
+
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
 }
 
 /* auth forms */

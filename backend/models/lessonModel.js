@@ -4,8 +4,7 @@ const Schema = mongoose.Schema
 
 const lessonSchema = new Schema({
     lessonNo: {
-        type: Number,
-        required: true
+        type: Number
     },
     name: {
         type: String,
@@ -13,11 +12,10 @@ const lessonSchema = new Schema({
     },
     description: {
         type: String,
-        required: false
+        required: true
     },
     done: {
-        type: Boolean,
-        required: true
+        type: Boolean
     }
     
 }, { timestamps: true })

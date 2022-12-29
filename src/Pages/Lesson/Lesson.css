@@ -1,4 +1,4 @@
-.lesson-wrapper{
+/* .lesson-wrapper{
     padding-top: 150px;
     padding-bottom: 150px;
     margin-left: 10%;
@@ -18,4 +18,81 @@
 .single-lesson-id-card Text{
     font-family: 'Courier New', Courier, monospace;
     color:black
-}
+} */
+
+:root {
+    --primary: #1aac83;
+    --error: #e7195a;
+  }
+
+/* homepage */
+.lesson-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 100px;
+  }
+
+  .lesson-title {
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+  }
+  .phrases {
+    background: #fff;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  }
+  .phrases h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: var(--primary);
+  }
+  .phrases p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+  }
+  .phrases span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 50%;
+    color: #333;
+  }
+
+  /* new workout form */
+label, input {
+    display: block;
+  }
+  input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  form button {
+    background: var(--primary);
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-family: "Poppins";
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  div.error {
+    padding: 10px;
+    background: #ffefef;
+    border: 1px solid var(--error);
+    color: var(--error);
+    border-radius: 4px;
+    margin: 20px 0;
+  }
