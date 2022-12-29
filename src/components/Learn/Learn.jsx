@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Learn.css';
 import learn1 from '../../images/learn1.jpg'
+import {Link} from 'react-router-dom'
 
 const Learn = () => {
   return (
@@ -13,7 +14,7 @@ const Learn = () => {
       <h5 className="card-title">Custom Animation</h5>
       <p className="card-text">Using animation to learn Bangla sign language using our custom animated hand model.</p>
       <p className="card-text">Easy to learn and navigate</p>
-      <button type="button" className="btn btn-outline-light">Get started</button>
+      <Link to='/lessons'><button type="button" className="btn btn-outline-light">Get started</button></Link>
       </div>
       </div>
     </div>
