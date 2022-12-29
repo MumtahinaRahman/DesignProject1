@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Interpret.css';
 import interpret1 from '../../images/interpret1.jpg'
+import {Link } from 'react-router-dom'
 
 const Learn = () => {
   return (
@@ -16,7 +17,7 @@ const Learn = () => {
           <h5 className="card-title">Assessment</h5>
           <p className="card-text">Test against learned words though quiz and gesture recognition</p>
           <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-          <button type="button" className="btn btn-outline-dark">Start now</button>
+          <Link to='/tests'><button type="button" className="btn btn-outline-dark">Start now</button></Link>
         </div>
       </div>
       </div>
