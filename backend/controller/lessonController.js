@@ -2,10 +2,12 @@ const Lesson = require('../models/lessonModel')
 const mongoose = require('mongoose')
 const { Less } = require('@tensorflow/tfjs-core')
 
+
 // get all lessons
 
 const getLessons = async(req, res) => {
-    const lessons = await Lesson.find({}).sort({createdAt: -1})
+    const user_id = req.user._id
+    const lessons = await Lesson.find({user_id}).sort({createdAt: -1})
 
     console.log(lessons)
     
@@ -38,7 +40,8 @@ const createLesson = async(req, res) => {
     // add doc to db
 
     try {
-        const lesson = await Lesson.create({lessonNo, name, description})
+        const user_id = req.user._id
+        const lesson = await Lesson.create({lessonNo, name, description, user_id})
         res.status(200).json(lesson)
     } catch(error) {
         res.status(400).json({error: error.message})
