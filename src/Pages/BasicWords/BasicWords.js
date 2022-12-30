@@ -90,8 +90,10 @@ function BasicWords() {
                         controls = {true} 
                         playing = {true}
                     /> */}
-
-                    <video src={ami} autoPlay loop muted/>
+                    <div>
+                      <video src={ami} autoPlay loop muted/>
+                    </div>
+                    
               </div>
 
               <div className='col-5 animation-description'>
