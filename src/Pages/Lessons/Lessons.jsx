@@ -10,6 +10,7 @@ import shortVowel from '../../images/shortVowel.png'
 import word from '../../images/word.png'
 import everyday from '../../images/everyday.png'
 import vaat from '../../images/vaat.png'
+import numbers from '../../images/dui.png'
 // import jhuli from '../../images/jhuli.jpg'
 
 function Lessons() {
@@ -47,10 +48,10 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
-              <img src={shortVowel} className="card-img-top lesson-img" alt="..."/>
+              <Link to='/Numbers/Numbers' style={{"text-decoration":"none"}}>
+              <img src={numbers} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
-                <h5 className="card-title">Shortened vowels</h5>
+                <h5 className="card-title">Numbers</h5>
                 </div>
               </Link>
             </div>

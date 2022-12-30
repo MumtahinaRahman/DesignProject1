@@ -14,6 +14,7 @@ import HandPose from './Pages/HandPose/HandPose';
 import Login from './Pages/Login/Login';
 import Profile from './Pages/Profile/Profile';
 import Consonants from './Pages/Consonants/Consonants';
+import Numbers from './Pages/Numbers/Numbers';
 
 // style={{backgroundImage:`url(${bg})`,  }}
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="lessons/lesson" element={<Lesson />}/>
             <Route path="lessons/lesson/:id" element={<LessonID />}/>
             <Route path="Consonants/Consonants" element={<Consonants />}/>
+            <Route path="Numbers/Numbers" element={<Numbers />}/>
             <Route path="tests" element={<Tests />}/>
             <Route path="quiz" element={<Quiz />}/>
             <Route path="tests/webcam" element={<HandPose />}/>
