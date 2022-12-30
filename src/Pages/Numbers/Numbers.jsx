@@ -1,6 +1,6 @@
 import React from 'react'
 // import Card from 'react-bootstrap/Card';
-import './Consonants.css';
+import './Numbers.css';
 import { Link } from 'react-router-dom'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions';
@@ -8,30 +8,31 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import kaw from '../../images/kaw.png'
-import khaw from '../../images/khaw.png'
-import gaw from '../../images/gaw.png'
-import ghaw from '../../images/ghaw.png'
-import ungo from '../../images/ungo.png'
-import chhaw from '../../images/chhaw.png'
-import jhaw from '../../images/jhaw.png'
-import daw from '../../images/daw.png'
-import thaw from '../../images/thaw.png'
-import murdhonno from '../../images/murdhonno.png'
+import Number0 from '../../images/Number0.png'
+import Number1 from '../../images/Number1.png'
+import Number2 from '../../images/Number2.png'
+import Number3 from '../../images/Number3.png'
+import Number4 from '../../images/Number4.png'
+import Number5 from '../../images/Number5.png'
+import Number6 from '../../images/Number6.png'
+import Number7 from '../../images/Number7.png'
+import Number8 from '../../images/Number8.png'
+import Number9 from '../../images/Number8.png'
 
-function Consonants() {
+function Numbers() {
   return (
     <div className='test-card-wrapper'>
+
       <div className='card1'>
       <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="140"
-        image= {kaw}
+        image= {Number0}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">Ka </Button>
+        <Button className='button' size="small">Number0 </Button>
       </CardActions>
     </Card>
     </div>
@@ -41,11 +42,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {khaw}
+        image= {Number1}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">Kha </Button>
+        <Button className='button' size="small">Number1 </Button>
       </CardActions>
     </Card>
     </div>
@@ -54,11 +55,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {gaw}
+        image= {Number2}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">Ga </Button>
+        <Button className='button' size="small">Number2 </Button>
       </CardActions>
     </Card>
     </div>
@@ -67,11 +68,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {ghaw}
+        image= {Number3}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">Gha </Button>
+        <Button className='button' size="small">Number3 </Button>
       </CardActions>
     </Card>
     </div>
@@ -81,11 +82,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {ungo}
+        image= {Number4}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">Ungo </Button>
+        <Button className='button' size="small">Number4 </Button>
       </CardActions>
     </Card></div>
 
@@ -94,11 +95,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {chhaw}
+        image= {Number5}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">Chhaw </Button>
+        <Button className='button' size="small">Number5 </Button>
       </CardActions>
     </Card>
     </div>
@@ -108,11 +109,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {jhaw}
+        image= {Number6}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">jhaw </Button>
+        <Button className='button' size="small">Number6 </Button>
       </CardActions>
     </Card>
     </div>
@@ -122,11 +123,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {daw}
+        image= {Number7}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">daw </Button>
+        <Button className='button' size="small">Number7 </Button>
       </CardActions>
     </Card>
     </div>
@@ -136,11 +137,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {thaw}
+        image= {Number8}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">thaw </Button>
+        <Button className='button' size="small">Number8 </Button>
       </CardActions>
     </Card>
     </div>
@@ -150,11 +151,11 @@ function Consonants() {
       <CardMedia
         component="img"
         height="140"
-        image= {murdhonno}
+        image= {Number9}
         alt="green iguana"
       />
       <CardActions>
-        <Button className='button' size="small">murdhonno </Button>
+        <Button className='button' size="small">Number9 </Button>
       </CardActions>
     </Card>
     </div>
@@ -164,4 +165,4 @@ function Consonants() {
   )
 }
 
-export default Consonants
+export default Numbers
