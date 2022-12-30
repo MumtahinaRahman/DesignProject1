@@ -1,0 +1,33 @@
+/* The answer selecteed by the user */
+.selected {
+    background-color: rgb(15, 173, 120);
+    color: #000;
+}
+
+/* The list of options */
+.options {
+    align-items: center;
+    margin-left: 40rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 8px;
+    width: 10rem;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.quiz-score, .quiz{
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+    font-family: Verdana;
+    font-size: 18px; 
+}
+
+.quiz-image{
+    width: 10rem;
+    height: 10rem;
+}

@@ -62,7 +62,7 @@ function Tests() {
     </div>
     </div>
 
-  /* //   <div className='test-card-wrapper'>
+  //   <div className='test-card-wrapper'>
 
   //   <Card style={{ width: '18rem' }}>
   //     <Link to="/tests/quiz" style={{textDecoration: "none"}}>
@@ -82,7 +82,7 @@ function Tests() {
   //     </Link>
   //   </Card>
 
-  // </div> */
+  // </div>
   )
 }
 export default Tests

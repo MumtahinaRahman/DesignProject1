@@ -47,7 +47,7 @@ function App() {
             <Route path="Consonants/Consonants" element={<Consonants />}/> */}
             <Route path="BasicWords/BasicWords" element={<BasicWords />}/>
             <Route path="tests" element={<Tests />}/>
-            <Route path="quiz" element={<Quiz />}/>
+            <Route path="tests/quiz" element={<Quiz />}/>
             <Route path="tests/webcam" element={<HandPose />}/>
             <Route path="login" element={!user? <Login />: <Navigate to="/" />}/>
             <Route path="signup" element={!user? <Signup /> : <Navigate to="/" />}/>
