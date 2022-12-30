@@ -1,14 +1,25 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
+import * as fp from "fingerpose";
 import Webcam from "react-webcam";
 //import ".././App.css";
 import { drawHand } from "./Utilities";
 // import * as fp from "fingerpose";
 
+//importing custom gesture
+import {one} from "./One.jsx";
+
+//importing emojis
+import {thumbs_up} from "./thumbs_up.png";
+import {victory} from "./victory.png";
+
 function HandPose() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+
+  const [emoji, setEmoji] = useState(null);
+  const emojis = {thumbs_up:"thunmbs up", victory:"victory", one:"one"};
 
   const runHandpose = async () => {
     const net = await handpose.load();
@@ -43,14 +54,36 @@ function HandPose() {
       const hand = await net.estimateHands(video);
       console.log(hand);
 
+      if(hand.length > 0){
+        const GE = new fp.GestureEstimator([
+          fp.Gestures.VictoryGesture,
+          fp.Gestures.ThumbsUpGesture,
+          one,
+        ]);
+
+        const gesture = await GE.estimate(hand[0].landmarks, 8);
+        // console.log(gesture.gestures);
+
+        if (gesture.gestures !== undefined && gesture.gestures.length > 0){
+          const confidence = gesture.gestures.map((prediction) => prediction.score);
+          const maxConfidence = confidence.indexOf(Math.max.apply(null, confidence));
+          setEmoji(gesture.gestures[maxConfidence].name);
+          // var emoji = gesture.gestures[maxConfidence].name;
+          console.log("index: ", maxConfidence);
+          // console.log("confidence: ", confidence);
+          console.log(emoji);
+        }
+      }
+
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
       drawHand(hand, ctx);
     }
+    return emoji;
   };
 
   runHandpose();
-  tf.getBackend();
+  // tf.getBackend();
 
   return (
     <div className="App">
@@ -86,6 +119,20 @@ function HandPose() {
             height: 480,
           }}
         />
+
+        {emoji !== null ? <h1 style={{
+          zindex: 20,
+          position: "absolute",
+          left: 360,
+          bottom: 500,
+          top: 120,
+          right: 0,
+          testAlign: "center",
+          color: "black",
+          height: 100,
+          width: 100
+          }} > {emoji} </h1> : ""}
+
       </header>
     </div>
   );
