@@ -58,7 +58,7 @@ function Lessons() {
           </div>
           <div className="col">
             <div className="card">
-              <Link to='/lessons/lesson' style={{"text-decoration":"none"}}>
+              <Link to='/BasicWords/BasicWords' style={{"text-decoration":"none"}}>
               <img src={word} className="card-img-top lesson-img" alt="..."/>
               <div className="card-body">
                 <h5 className="card-title">Basic words</h5>

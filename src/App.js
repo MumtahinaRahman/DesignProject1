@@ -19,6 +19,7 @@ import Consonants from './Pages/Consonants/Consonants';
 import Login from './Pages/Authentication/Login'
 import Signup from './Pages/Authentication/Signup'
 import Numbers from './Pages/Numbers/Numbers';
+import BasicWords from './Pages/BasicWords/BasicWords';
 
 // style={{backgroundImage:`url(${bg})`,  }}
 
@@ -41,6 +42,10 @@ function App() {
             <Route path="lessons/lesson/:id" element={<LessonID />}/> */}
             {/* <Route path="Consonants/Consonants" element={<Consonants />}/> */}
             <Route path="Numbers/Numbers" element={<Numbers />}/>
+            {/* <Route path="lessons/lesson" element={<Lesson />}/>
+            <Route path="lessons/lesson/:id" element={<LessonID />}/>
+            <Route path="Consonants/Consonants" element={<Consonants />}/> */}
+            <Route path="BasicWords/BasicWords" element={<BasicWords />}/>
             <Route path="tests" element={<Tests />}/>
             <Route path="quiz" element={<Quiz />}/>
             <Route path="tests/webcam" element={<HandPose />}/>

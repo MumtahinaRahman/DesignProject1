@@ -25,6 +25,35 @@ function Lesson() {
     })
   }
 
+  // const goToPrevious = () => {
+  //   setCurrentIndex(newIndex);
+  //   const isFirstVideo = currentIndex === 0;
+  //   const newIndex= isFirstVideo ? videos.length - 1 : currentIndex - 1;
+  //   setCurrentIndex(newIndex);
+  // }
+
+  // const goToNext = () => {
+  //   const isLastVideo = currentIndex === videos.length - 1;
+  //   const newIndex= isLastVideo ? 0 : currentIndex + 1;
+  //   setCurrentIndex(newIndex);
+  // }
+
+  // const dotsContainerStyles = {
+  //   display: 'flex',
+  //   justifyContent: 'center'
+  // }
+
+  // const dotStyles = {
+  //   margin: '0 3px',
+  //   cursor: 'pointer',
+  //   fontSize: '200px'
+  // }
+
+  // const goToVideo = (videoIndex) => {
+  //   setCurrentIndex(videoIndex);
+  // }
+
+
   return (
     <div className='lesson-card-wrapper'>
          <Card className='lesson-card'>
@@ -37,6 +66,7 @@ function Lesson() {
                   the animation will be displayed here.
                 </Card.Text>
                 <Card.Img className='animation-display' variant="top" src={animation} />
+                {/* <VideoPlayer videos={videos}/> */}
               </div>
 
               <div className='col-5 animation-description'>
@@ -58,6 +88,15 @@ function Lesson() {
 
           </Card.Body>
         </Card>
+
+{/* 
+        <div style={dotsContainerStyles}>
+          {videos.map((video, videoIndex) => (
+            <div key={videoIndex} style={dotStyles} onClick={() => goToVideo(videoIndex)}>-</div>
+          ))}
+        </div> */}
+
+
     </div>
   )
 }
