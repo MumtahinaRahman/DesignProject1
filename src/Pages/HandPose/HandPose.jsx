@@ -8,18 +8,18 @@ import { drawHand } from "./Utilities";
 // import * as fp from "fingerpose";
 
 //importing custom gesture
-import {one} from "./One.jsx";
+// import {one} from "./One.jsx";
 
 //importing emojis
-import {thumbs_up} from "./thumbs_up.png";
-import {victory} from "./victory.png";
+// import {thumbs_up} from "./thumbs_up.png";
+// import {victory} from "./victory.png";
 
 function HandPose() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
 
   const [emoji, setEmoji] = useState(null);
-  const emojis = {thumbs_up:"thunmbs up", victory:"victory", one:"one"};
+  const emojis = {thumbs_up:"thunmbs up", victory:"victory"};
 
   const runHandpose = async () => {
     const net = await handpose.load();
@@ -57,8 +57,7 @@ function HandPose() {
       if(hand.length > 0){
         const GE = new fp.GestureEstimator([
           fp.Gestures.VictoryGesture,
-          fp.Gestures.ThumbsUpGesture,
-          one,
+          fp.Gestures.ThumbsUpGesture
         ]);
 
         const gesture = await GE.estimate(hand[0].landmarks, 8);
